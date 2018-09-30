@@ -59,9 +59,9 @@ export default class Adapter {
                 return reject(response && response.error && response.error.message ? response.error.message : genericError);
             }
 
-            resolve({
-                default: response.url
-            });
+
+
+            resolve(response.urls);
         });
 
         if (xhr.upload) {
